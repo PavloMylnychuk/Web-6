@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "sidebar main"
+                "footer footer";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto auto 1fr auto;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #e3e3e3;
+            padding: 20px;
+            border: 2px solid green;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #c3c3c3;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            border: 2px solid red;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #d3d3d3;
+            padding: 20px;
+            border: 2px solid blue;
+        }
+
+        .main-content {
+            grid-area: main;
+            background-color: #f3f3f3;
+            padding: 20px;
+            border: 2px solid yellow;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #b3b3b3;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            Header Section
+        </header>
+        <nav>
+            <div>Menu 1</div>
+            <div>Menu 2</div>
+            <div>Menu 3</div>
+        </nav>
+        <div class="sidebar">
+            Sidebar Content
+        </div>
+        <div class="main-content">
+            Main Content Area
+        </div>
+        <footer>
+            <div>Footer Left</div>
+            <div>Footer Right</div>
+        </footer>
+    </div>
+</body>
+</html>
